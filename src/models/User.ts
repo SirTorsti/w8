@@ -3,14 +3,14 @@ import mongoose, { Schema, Document } from 'mongoose'
 interface IUser extends Document {
     username: string
     email: string
-    isAdmin: boolean
+    isAdmin?: boolean
     password: string
 }
 
 const UserSchema: Schema = new Schema({
-    username: { type: String, required: true },
+    username: { type: String, required: false },
     email: { type: String, unique: true, required: true },
-    isAdmin: { type: Boolean, required: true },
+    isAdmin: { type: Boolean, default: false },
     password: { type: String, required: true }
 })
 

@@ -4,6 +4,7 @@ import morgan from "morgan"
 import router from "./src/routes/router"
 import mongoose, { Connection } from 'mongoose'
 import dotenv from "dotenv"
+import { validateToken } from "./src/middleware/validateToken"
 
 dotenv.config()
 
@@ -19,8 +20,12 @@ db.on('error', console.error.bind(console, 'MongoDB connection error:'))
 
 //app.use(passport.initialize())
 app.use(express.json())
-app.use(morgan('dev'))
 app.use(express.urlencoded({ extended: false }))
+app.use(morgan('dev'))
 
 app.use(express.static(path.join(__dirname, '../public')))
 app.use('/', router)
+
+app.listen(port, () => {
+    console.log(`Server running on port ${port}`)
+})

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!--<link rel = "stylesheet" href="./css/style.css">-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js" defer></script>
+    <script src="./js/main.js" defer></script>
+</head>
+<body>
+    <nav>
+        <div class="nav-wrapper">
+            <ul id="nav-mobile" class="right hide-on-med-and-down">
+                <li>
+                    <form id="loginForm" class="row" style="margin: 0;">
+                        <div class="input-field col s4">
+                            <input id="email" type="email" class="validate">placeholder="Email">
+                            <label for="email">Email</label>
+                        </div>
+                        <div class="input-field col s4">
+                            <input id="password" type="password" class="validate">placeholder="Password">
+                            <label for="password">Password</label>
+                        </div>
+                        <div class="input-field col s4">
+                            <button type="submit" class="btn">Login</button>
+                        </div>
+                    </form>
+                </li>
+                <li><a href="register.html" class="btn">Register</a></li>
+        </div>
+    </nav>
+
+    <div class="container">
+
+        <div id="topicForm" class="row">
+            <div class="input-field col s12">
+                <input id="topicTitle" type="text" class="validate" placeholder="Topic Title">
+            </div>
+            <div class="input-field col s12">
+                <textarea id="topicText" class="materialize-textarea" placeholder="Topic Content"></textarea>
+            </div>
+            <div class="input-field col s12">
+                <button id="postTopic" class="btn">Post Topic</button>
+            </div>
+        </div>
+
+        <div id="topics" class="row">
+        </div>
+    </div>
+</body>
+</html>
